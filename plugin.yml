@@ -1,0 +1,20 @@
+name: ${project.name}
+version: ${project.version}
+author: totemo
+authors: []
+description: ${project.description}
+website: ${project.url}
+main: nu.nerd.badsanta.BadSanta
+depend: [WorldEdit]
+
+permissions:
+  badsanta.admin:
+    description: Permission to administer the plugin.
+    default: op
+
+commands:
+  badsanta:
+    description: ${project.name} administrative command.
+    permission: badsanta.admin
+    usage: |
+      /<command> reload: Reload the configuration.

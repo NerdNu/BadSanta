@@ -1,0 +1,237 @@
+debug:
+  config: true
+  death: false
+  spawn: false
+
+world:
+  name: world
+  border: 2990
+
+mob:
+  santa:
+    chance: 0.3
+    health: 30
+    head:
+      skin: SantaClaus  
+      chance: 0.0025
+
+  elf:
+    health: 20
+    baby_chance: 0.2
+
+armour:
+  worn: true
+  drop_chance: 0.0075
+
+objective:
+  # Chance of an objective spawning upon Santa death.
+  chance: 0.05
+
+  # Maximum number of objectives allowed in the world simultaneously.
+  max: 30
+
+  # Range of distances from mob death point that a pot will spawn.
+  range:
+    min: 100
+    max: 300
+
+  # Extra ticks of time given to the player to find the objective.
+  extra_ticks: 800
+
+  # Objective will exist in the world for range / min_player_speed seconds.
+  # The player must move faster than this to reach the pot in time.
+  min_player_speed: 3.0
+  
+  # Player heads used to skin presents (objectives).
+  skins:
+  - MHF_Present1
+  - MHF_Present2
+  - Hannah4848
+  - SeerPotion
+  - CruXXx
+  
+  map:
+    name: '&2Gift Card'
+    lore: 'Merry Christmas!|Your gift is waiting at {0}.|Better hurry before the Grinch gets it!'
+    
+  particle:
+    radius: 2.0
+    count: 25
+
+drops:
+  firework:
+    chance: 0.05
+
+  regular:
+    chocolates:
+      chance: 0.1
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        type: INK_SACK
+        damage: 3
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: "§4Chocolates"
+    gingerbread:
+      chance: 0.1
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        type: COOKIE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: "§4Gingerbread"
+    cake:
+      chance: 0.015
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        type: CAKE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: "§4Christmas Cake"
+
+  special:
+    present1:
+      chance: 0.0015
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        type: SKULL_ITEM
+        damage: 3
+        meta:
+          ==: ItemMeta
+          meta-type: SKULL
+          internal: H4sIAAAAAAAAAONiYOBi4AnOLs3JCSjKT8vMSeVgYPFLzE1l4PH1cIsPKEotTs0rMWRgAAAaV1SNKQAAAA==
+          skull-owner: MHF_Present1
+          display-name: "§4Christmas Present"
+    present2:
+      chance: 0.0015
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        type: SKULL_ITEM
+        damage: 3
+        meta:
+          ==: ItemMeta
+          meta-type: SKULL
+          internal: H4sIAAAAAAAAAONiYOBi4AnOLs3JCSjKT8vMSeVgYPFLzE1l4PH1cIsPKEotTs0rMWJgAABD6RKPKQAAAA==
+          skull-owner: MHF_Present2
+          display-name: "§4Christmas Present"
+    present3:
+      chance: 0.0015
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        type: SKULL_ITEM
+        damage: 3
+        meta:
+          ==: ItemMeta
+          meta-type: SKULL
+          internal: H4sIAAAAAAAAAONiYOBi4AnOLs3JCSjKT8vMSeVgYPFLzE1l4PJIzMtLzDCxMLFgYAAAmlMETycAAAA=
+          skull-owner: Hannah4848
+          display-name: "§4Christmas Present"
+    present4:
+      chance: 0.0015
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        type: SKULL_ITEM
+        damage: 3
+        meta:
+          ==: ItemMeta
+          meta-type: SKULL
+          internal: H4sIAAAAAAAAAONiYOBi4AnOLs3JCSjKT8vMSeVgYPFLzE1l4ApOTS0KyC/JzM9jYAAAo3iVwicAAAA=
+          skull-owner: SeerPotion
+          display-name: "§4Christmas Present"
+    present5:
+      chance: 0.0015
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        type: SKULL_ITEM
+        damage: 3
+        meta:
+          ==: ItemMeta
+          meta-type: SKULL
+          internal: H4sIAAAAAAAAAONiYOBi4AnOLs3JCSjKT8vMSeVgYPFLzE1lYHMuKo2IqGBgAADeeXLfIwAAAA==
+          skull-owner: CruXXx
+          display-name: "§4Christmas Present"
+    eggnog:
+      chance: 0.01
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        type: POTION
+        meta:
+          ==: ItemMeta
+          meta-type: POTION
+          display-name: §4Eggnog
+          custom-effects:
+          - ==: PotionEffect
+            effect: 6
+            duration: 1
+            amplifier: 0
+            ambient: true
+            has-particles: true
+          - ==: PotionEffect
+            effect: 15
+            duration: 400
+            amplifier: 1
+            ambient: true
+            has-particles: true
+          - ==: PotionEffect
+            effect: 9
+            duration: 400
+            amplifier: 1
+            ambient: true
+            has-particles: true
+
+  objective:
+    iron:
+      min: 3
+      max: 6
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        type: IRON_INGOT
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: "§4Christmas Loot"
+    gold:
+      min: 3
+      max: 6
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        type: GOLD_INGOT
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: "§4Christmas Loot"
+    emerald:
+      min: 2
+      max: 5
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        type: EMERALD
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: "§4Christmas Loot"
+    diamond:
+      min: 2
+      max: 5
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        type: DIAMOND
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: "§4Christmas Loot"
+    coal:
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        type: COAL_BLOCK
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: "§4Christmas Loot"
+          lore:
+          - If only you had been good!
+          
+          
